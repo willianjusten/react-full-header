@@ -1,0 +1,70 @@
+{
+  "name": "react-full-header",
+  "version": "0.0.1",
+  "description": "A full header component created with React.",
+  "main": "dist/Main.js",
+  "scripts": {
+    "build": "npm run clean && npm run babel && npm run minify",
+    "babel": "./node_modules/.bin/babel src -d dist",
+    "minify": "./node_modules/.bin/uglifyjs -c -m -o dist/Main.min.js dist/Main.js",
+    "pub": "npm run build && npm publish",
+    "clean": "rimraf dist",
+    "start": "npm run storybook",
+    "storybook": "./node_modules/.bin/start-storybook -p 9001 -c ./storybook",
+    "build-storybook": "./node_modules/.bin/build-storybook -c ./storybook -o .out",
+    "deploy-storybook": "storybook-to-ghpages",
+    "test": "./node_modules/.bin/mocha --require tests/helpers/setup.js tests/specs/**/*.spec.js",
+    "test:tdd": "./node_modules/.bin/mocha --require tests/helpers/setup.js tests/specs/**/*.spec.js -w",
+    "test:coverage": "./node_modules/.bin/nyc --reporter=html --reporter=text ./node_modules/.bin/mocha tests/helpers/setup.js tests/specs/**/*.spec.js",
+    "lint": "./node_modules/.bin/eslint src",
+    "lint:fix": "./node_modules/.bin/eslint src --fix",
+    "prepush": "npm run lint && npm test"
+  },
+  "nyc": {
+    "exclude": [
+      "tests",
+      "dist"
+    ]
+  },
+  "keywords": [
+    "react",
+    "component",
+    "base"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@personare/react-storybook-decorator-github-corner": "^0.1.4",
+    "@storybook/react": "^3.1.5",
+    "@storybook/storybook-deployer": "^2.0.0",
+    "assert-equal-jsx": "^1.0.3",
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.10.4",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^6.2.4",
+    "babel-preset-airbnb": "^2.0.0",
+    "babel-register": "^6.24.1",
+    "chai": "^3.5.0",
+    "enzyme": "^2.9.1",
+    "eslint": "^2.13.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.12.0",
+    "eslint-plugin-jsx-a11y": "^1.5.5",
+    "eslint-plugin-react": "^5.2.2",
+    "husky": "^0.11.4",
+    "jsdom": "^9.4.1",
+    "mocha": "^2.5.3",
+    "nyc": "^7.0.0",
+    "raw-loader": "^0.5.1",
+    "react-test-renderer": "^15.6.1",
+    "rimraf": "^2.5.3",
+    "sinon": "^1.17.4",
+    "sinon-chai": "^2.8.0",
+    "style-loader": "^0.13.1",
+    "uglify-js": "^2.7.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}
