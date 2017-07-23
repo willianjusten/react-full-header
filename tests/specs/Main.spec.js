@@ -94,7 +94,7 @@ describe('<FullHeader />', () => {
         });
     });
 
-    context('title', () => {
+    context('video', () => {
         it('should have video tag when video is passed', () => {
             const wrapper = shallow(<FullHeader video="my_video.mp4" />);
             expect(wrapper.find('video')).to.have.length(1);

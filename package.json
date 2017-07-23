@@ -1,6 +1,6 @@
 {
   "name": "react-full-header",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A full header component created with React.",
   "main": "dist/Main.js",
   "scripts": {
