@@ -50,7 +50,7 @@ render() {
 ## Architecture
 
 We've developed this component using the following boilerplate:
-[lyef-react-component](https://github.com/lyeft/lyef-react-component).
+[lyef-react-component](https://github.com/lyef/lyef-react-component).
 
 If you want to contribute with this component:
 [Contributing Documentation](https://github.com/willianjusten/react-full-header/blob/master/CONTRIBUTING.md).
