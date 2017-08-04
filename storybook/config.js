@@ -1,7 +1,4 @@
-import { configure, addDecorator } from '@storybook/react';
-import GithubCorner from '@personare/react-storybook-decorator-github-corner';
-
-addDecorator(GithubCorner);
+import { configure } from '@storybook/react';
 
 import '../css/main.css';
 

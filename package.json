@@ -33,7 +33,6 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@personare/react-storybook-decorator-github-corner": "^0.1.4",
     "@storybook/react": "^3.1.5",
     "@storybook/storybook-deployer": "^2.0.0",
     "assert-equal-jsx": "^1.0.3",
